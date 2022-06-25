@@ -1,0 +1,22 @@
+{% extends 'portafolio/layout.html' %}
+{% block content %}
+<br/>
+<table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">Nombre</th>
+        <th scope="col">Descripcion</th>
+        <th scope="col">Link</th>
+      </tr>
+    </thead>
+    <tbody>
+    {% for repo in repositorios %}
+      <tr>
+        <td>{{repo['nombre']}}</td>
+        <td>{{repo['descripcion']}}</td>
+        <td><a href="{{repo['url']}}">Ver Repositorio</a></td>
+      </tr>
+    {% endfor %}
+    </tbody>
+  </table>
+{% endblock %}
